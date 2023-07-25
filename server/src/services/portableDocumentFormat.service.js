@@ -33,7 +33,6 @@ const getPdfByIdService = async (pdfId) => {
 
 const updatePdfService = async (pdfId, pdfData) => {
   try {
-    console.log(pdfId, "pdfId")
     const pdf = await PortableDocumentFormatModel.findByPk(pdfId);
     if (!pdf) {
       throw new Error('PDF not found');
